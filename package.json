@@ -1,0 +1,24 @@
+{
+  "name": "logging_site",
+  "version": "1.0.0",
+  "description": "It is just simple a project, that i made for my girlfriend, so she doesn't need to constantly edit a pinned discord message in our DM's that keeps getting buried further down.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuliaMaeve/WatchList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuliaMaeve/WatchList/issues"
+  },
+  "homepage": "https://github.com/YuliaMaeve/WatchList#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "firebase": "^11.6.1"
+  }
+}
