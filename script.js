@@ -127,38 +127,3 @@ function saveItem() {
     }
     closeModal();
 }
-const firebaseConfig = {
-    apiKey: "AIzaSyBCHo1GwJHOYu6Dx3vh_fP39qpz0LT3iV8",
-    authDomain: "watchlist-7fdde.firebaseapp.com",
-    projectId: "watchlist-7fdde",
-    storageBucket: "watchlist-7fdde.firebasestorage.app",
-    messagingSenderId: "325594726158",
-    appId: "1:325594726158:web:7da567f15a7274cb2b215f",
-    measurementId: "G-8TKYBR7ZT0"
-};
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-function saveData() {
-    const data = {
-        watching: getListData('watching'),
-        watchIdeas: getListData('watch-ideas'),
-        finished: getListData('finished'),
-        dropped: getListData('dropped'),
-        youtube: getListData('youtube')
-    };
-    db.ref('userData').set(data);
-}
-
-window.onload = () => {
-    db.ref('userData').once('value').then(snapshot => {
-        const data = snapshot.val();
-        if (data) {
-            populateList('watching', data.watching);
-            populateList('watch-ideas', data.watchIdeas);
-            populateList('finished', data.finished);
-            populateList('dropped', data.dropped);
-            populateList('youtube', data.youtube);
-        }
-    });
-};
