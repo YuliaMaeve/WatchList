@@ -64,11 +64,11 @@
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span class="close-button" onclick="closeModal()">&times;</span>
-                <h2 id="modal-title">Add Item</h2>  
+                <h2 id="modal-title"></h2>  
                 <form id="modal-form">
-                    <select id="item-select" style="display: none;"></select>
+                    <select id="item-select"></select>
                     <input type="text" id="item-name" placeholder="Name" required>
-                    <input type="url" id="item-link" placeholder="Link" style="display: none;">
+                    <input type="url" id="item-link" placeholder="Link" required>
                     <button type="button" onclick="saveItem()">Save</button>
                 </form>
             </div>
